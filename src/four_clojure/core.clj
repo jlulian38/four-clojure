@@ -1,5 +1,12 @@
 (ns four-clojure.core)
 
+(def p58
+  (fn p58
+    ([] identity)
+    ([f] f)
+    ([f g] (fn [& args] (f (apply g args))))
+    ([f g & fs] (reduce p58 (list* f g fs)))))
+
 (def p121 (fn [form]
        (fn [env]
          (let [ops {'* * '/ / '+ + '- -}

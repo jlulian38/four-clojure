@@ -2,6 +2,11 @@
   (:require [clojure.test :refer :all]
             [four-clojure.core :refer :all]))
 
+(deftest p58-test
+  (testing "4clojure problem 58")
+  (is (= [3 2 1] ((p58 rest reverse) [1 2 3 4]))))
+
+
 (deftest p121-test
   (testing "4clojure problem 121"
     (is (= 2 ((p121 '(/ a b))
