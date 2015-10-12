@@ -6,6 +6,15 @@
   (testing "4clojure problem 58")
   (is (= [3 2 1] ((p58 rest reverse) [1 2 3 4]))))
 
+(deftest p69-test
+  (testing "4clojure problem 69")
+  (is (= (p69 * {:a 2, :b 3, :c 4} {:a 2 :d 5})
+         {:a 4 :b 3 :c 4 :d 5}))
+  (is (= (p69 * {:a 2, :b 3, :c 4} {:a 2} {:b 2} {:c 5})
+         {:a 4, :b 6, :c 20}))
+  (is (= (p69 concat {:a [3], :b [6]} {:a [4 5], :c [8 9]} {:b [7]})
+         {:a [3 4 5], :b [6 7], :c [8 9]})))
+
 
 (deftest p121-test
   (testing "4clojure problem 121"
